@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Jeff Did — frankensqlite</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:2rem 1.5rem}
+.container{max-width:1200px;margin:0 auto}
+.back{color:#58a6ff;text-decoration:none;font-size:.9rem;display:inline-block;margin-bottom:1.5rem}
+.back:hover{text-decoration:underline}
+h1{font-size:2rem;color:#f0f6fc;margin-bottom:.8rem}
+.summary{color:#8b949e;font-size:1rem;line-height:1.6;margin-bottom:2rem;border-left:3px solid #30363d;padding-left:1rem;max-width:900px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;line-height:1.5}
+thead{position:sticky;top:0}
+th{background:#161b22;color:#f0f6fc;text-align:left;padding:.7rem .8rem;border-bottom:2px solid #30363d;white-space:nowrap}
+td{padding:.6rem .8rem;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+td:first-child{color:#484f58;text-align:center;white-space:nowrap;width:2rem}
+td:nth-child(2){max-width:500px}
+td:nth-child(3){white-space:nowrap;color:#8b949e;width:8rem}
+td:nth-child(4){width:5rem;text-align:center}
+td:nth-child(5){color:#8b949e;font-size:.82rem;max-width:300px}
+.conf-high,.conf-very-high{background:#1a3a1a;color:#3fb950;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-very-high{background:#1a4a1a;color:#56d364}
+.conf-medium{background:#3a3a1a;color:#d29922;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-low{background:#3a1a1a;color:#f85149;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.prompt-id{color:#bc8cff;font-weight:600}
+.pivot{background:#2d1a1a;font-weight:700;color:#f0f6fc}
+.pivot td{border-top:2px solid #f85149;border-bottom:2px solid #f85149}
+.sleep td{background:#1a1a2d;font-style:italic}
+.footer{margin-top:2.5rem;color:#484f58;font-size:.8rem;text-align:center;padding-top:1.5rem;border-top:1px solid #21262d}
+a{color:#58a6ff;text-decoration:none}
+code{background:#21262d;padding:.15rem .3rem;border-radius:3px;font-size:.82rem;color:#c9d1d9}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="index.html">&larr; All repos</a>
+<h1>What Jeff Did &mdash; frankensqlite</h1>
+<div class="summary">Feb 7 2026, ~18 hours (with 6h sleep break), 137 commits, 23 named versions: evolved an 826KB database engine spec from an 8,628-line seed document through multi-model synthesis + systematic section-by-section audit.</div>
+<table>
+<thead><tr><th>#</th><th>What he did</th><th>When</th><th>Confidence</th><th>How we know</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Pasted the 8,628-line spec (from a prior planning session) into a fresh model and asked it to review the whole plan for better architecture, features, and robustness <span class="prompt-id">(P04)</span></td><td>01:17 ET</td><td><span class="conf-high">High</span></td><td>commit adds +8,628/-0; message: &quot;Add comprehensive specification documents&quot;</td></tr>
+<tr><td>2</td><td>Told the model its revision was &quot;a far cry from OPTIMAL&quot; and to try again with intensity -- classic praise-round escalation <span class="prompt-id">(P31)</span></td><td>01:43 ET</td><td><span class="conf-medium">Medium</span></td><td>+431/-76 in 26 min; promotes SSI to V1, adds shard lock tables -- praise-round rewrite pattern</td></tr>
+<tr><td>3</td><td>Third praise round: &quot;ABSOLUTE BEST work, leave nothing on the table&quot; -- model reconciles internal contradictions instead of adding new sections <span class="prompt-id">(P32)</span></td><td>02:04 ET</td><td><span class="conf-medium">Medium</span></td><td>commit says &quot;reconcile v1 specs&quot;; +242/-116 rewrite-heavy, typical of P32 self-correction</td></tr>
+<tr><td>4</td><td>Directed a first-principles rethink of scope boundaries, ECS substrate, multi-process MVCC, and encryption tradeoffs <span class="prompt-id">(P01)</span></td><td>02:45 ET</td><td><span class="conf-medium">Medium</span></td><td>41-min gap = new prompt; commit: &quot;scope doctrine, ECS substrate, multi-process MVCC, encryption&quot;</td></tr>
+<tr><td>5</td><td>Targeted first-principles deep-dive on WAL frame layout -- demanded byte-for-byte SQLite compatibility <span class="prompt-id">(P01)</span></td><td>02:56 ET</td><td><span class="conf-medium">Medium</span></td><td>commit: &quot;revise WAL frame layout for true compatibility mode&quot;; moves FEC data to sidecar file</td></tr>
+<tr><td>6</td><td>Fed competing outputs from 3+ frontier models into one model and asked it to blend &quot;best of all worlds&quot; -- Codex synthesis <span class="prompt-id">(P15)</span></td><td>03:14 ET</td><td><span class="conf-high">High</span></td><td>commit explicitly says &quot;Codex synthesis&quot;; tweet at 13:00 UTC confirms &quot;every frontier model weighed in&quot;</td></tr>
+<tr><td>7</td><td>Fired a single &quot;alien-artifact-level math&quot; prompt to multiple models simultaneously, then merged results as they arrived -- 8 sub-versions in 34 minutes (V1.5 through V1.6h) <span class="prompt-id">(P26+P15)</span></td><td>03:16-03:50 ET</td><td><span class="conf-high">High</span></td><td>tweet at 10:08 UTC: &quot;Alien Artifacts are here&quot;; V1.6f commit removes &quot;3-way merge artifacts&quot; (= multi-model merge)</td></tr>
+<tr><td>8</td><td>Post-merge cleanup: told model to scrutinize the spec for inconsistencies after all the merges, align naming, fix encryption model, seal traits <span class="prompt-id">(P02b)</span></td><td>04:08-04:54 ET</td><td><span class="conf-medium">Medium</span></td><td>high deletion count (+1,398/-848) = reconciliation; asupersync naming alignment, glossary tightening</td></tr>
+<tr class="sleep"><td>9</td><td><strong>Went to sleep</strong></td><td>04:54 ET</td><td><span class="conf-high">High</span></td><td>tweet at 09:50 UTC: &quot;I need to pass out now but the plan/spec is basically done and locked in&quot;</td></tr>
+<tr><td>10</td><td>Woke up, re-read the spec with fresh eyes, immediately targeted a cross-process cleanup bug <span class="prompt-id">(P20+P02)</span></td><td>11:07 ET</td><td><span class="conf-medium">Medium</span></td><td>first commit after 6h13m gap; small surgical fix (+56/-16); &quot;fix cross-process cleanup + lock table semantics&quot;</td></tr>
+<tr><td>11</td><td>Told a model to deepen the asupersync integration (regions, cancellation, supervision) and verify RaptorQ probability claims against RFC 6330 <span class="prompt-id">(P14)</span></td><td>11:21 ET</td><td><span class="conf-medium">Medium</span></td><td>commit: &quot;deepen asupersync integration&quot;; corrects RaptorQ failure probabilities; +472/-64</td></tr>
+<tr><td>12</td><td>Launched systematic deep-audit mode: told models to &quot;randomly explore&quot; spec sections, trace logic, find bugs with &quot;fresh eyes&quot; -- started with Sections 5, 6, 7 (MVCC, ARC Cache, Checksums). Multiple models running in parallel. <span class="prompt-id">(P02)</span></td><td>11:50-13:08 ET</td><td><span class="conf-high">High</span></td><td>commit messages say &quot;deep audit&quot; repeatedly; 41 commits in 78 min; V1.7b-V1.7c = correction epicenter</td></tr>
+<tr><td>13</td><td>Continued deep audit on Sections 3, 4, 12 (RaptorQ, Asupersync math, SQL Coverage) with escalating intensity -- &quot;I know for a fact there are serious issues&quot; <span class="prompt-id">(P02+P27)</span></td><td>13:10-14:00 ET</td><td><span class="conf-high">High</span></td><td>GF(256) worked example fixes, SAFE write-merge proofs; +1,793/-377; explicit &quot;deep audit&quot; in commits</td></tr>
+<tr><td>14</td><td>Audited Sections 9-10 (trait hierarchy, BtreeCursorOps, VFS, SHM safety) with high-stakes language <span class="prompt-id">(P02+P28)</span></td><td>14:16-14:35 ET</td><td><span class="conf-medium">Medium</span></td><td>commit: &quot;Section 9 deep audit -- BtreeCursorOps, shm_map safety&quot;; discovers RecentlyCommittedReadersIndex</td></tr>
+<tr><td>15</td><td>Audited Sections 13-14 (strftime, FTS5, aggregates) plus crash recovery and rebase hardening -- caught a &quot;10x arithmetic error&quot; <span class="prompt-id">(P02+P25)</span></td><td>14:42-15:31 ET</td><td><span class="conf-medium">Medium</span></td><td>commit fixes &quot;10x arithmetic error&quot;; replaces &quot;exhaustive&quot; with &quot;beam search&quot; to match SQLite NGQP</td></tr>
+<tr><td>16</td><td>Asked models &quot;what are the weakest/worst parts?&quot; then told them to &quot;figure out what we should do and then start making a series of small edits&quot; -- witness index sizing, physical .db-fec layout, TxnId sentinels <span class="prompt-id">(P14)</span></td><td>15:44-17:28 ET</td><td><span class="conf-high">High</span></td><td>tweet at 20:16 UTC quotes exactly: &quot;figure out what we should do and then start making a series of small edits&quot;</td></tr>
+<tr><td>17</td><td>Final hardening push: SHM snapshot seqlock, coordinator IPC, TxnSlot protocol, wire payload schemas, liveness guarantees -- &quot;don&#x27;t stop until everything is complete&quot; <span class="prompt-id">(P25)</span></td><td>18:11-19:16 ET</td><td><span class="conf-medium">Medium</span></td><td>commits go from large additions (+1,337) to tiny fixes (+50, +56, +82); session winds down; last commit = &quot;Round 16 audit notes&quot;</td></tr>
+</tbody>
+</table>
+<div class="footer">
+Reverse-engineered from git forensics, tweet anchors, and methodology analysis.
+&middot; <a href="https://github.com/Dicklesworthstone/frankensqlite">Source repo</a>
+&middot; <a href="index.html">Back to index</a>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Jeff Did — frankenterm</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:2rem 1.5rem}
+.container{max-width:1200px;margin:0 auto}
+.back{color:#58a6ff;text-decoration:none;font-size:.9rem;display:inline-block;margin-bottom:1.5rem}
+.back:hover{text-decoration:underline}
+h1{font-size:2rem;color:#f0f6fc;margin-bottom:.8rem}
+.summary{color:#8b949e;font-size:1rem;line-height:1.6;margin-bottom:2rem;border-left:3px solid #30363d;padding-left:1rem;max-width:900px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;line-height:1.5}
+thead{position:sticky;top:0}
+th{background:#161b22;color:#f0f6fc;text-align:left;padding:.7rem .8rem;border-bottom:2px solid #30363d;white-space:nowrap}
+td{padding:.6rem .8rem;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+td:first-child{color:#484f58;text-align:center;white-space:nowrap;width:2rem}
+td:nth-child(2){max-width:500px}
+td:nth-child(3){white-space:nowrap;color:#8b949e;width:8rem}
+td:nth-child(4){width:5rem;text-align:center}
+td:nth-child(5){color:#8b949e;font-size:.82rem;max-width:300px}
+.conf-high,.conf-very-high{background:#1a3a1a;color:#3fb950;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-very-high{background:#1a4a1a;color:#56d364}
+.conf-medium{background:#3a3a1a;color:#d29922;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-low{background:#3a1a1a;color:#f85149;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.prompt-id{color:#bc8cff;font-weight:600}
+.pivot{background:#2d1a1a;font-weight:700;color:#f0f6fc}
+.pivot td{border-top:2px solid #f85149;border-bottom:2px solid #f85149}
+.sleep td{background:#1a1a2d;font-style:italic}
+.footer{margin-top:2.5rem;color:#484f58;font-size:.8rem;text-align:center;padding-top:1.5rem;border-top:1px solid #21262d}
+a{color:#58a6ff;text-decoration:none}
+code{background:#21262d;padding:.15rem .3rem;border-radius:3px;font-size:.82rem;color:#c9d1d9}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="index.html">&larr; All repos</a>
+<h1>What Jeff Did &mdash; frankenterm</h1>
+<div class="summary">100 commits, Feb 27-28 2026 (~18.3 hours). Built a swarm-native terminal platform for AI agent fleets — telemetry instrumentation across 42+ modules, workflow engine refactoring, MCP server extraction — driven by pre-planned beads executed by 3-4 concurrent coding agents.</div>
+<table>
+<thead><tr><th>#</th><th>What he did</th><th>When</th><th>Confidence</th><th>How we know</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Wrote a detailed seed prompt describing a WezTerm-based terminal platform for managing AI coding agent fleets <span class="prompt-id">(P01)</span></td><td>~Jan 18 2026</td><td><span class="conf-very-high">Very High</span></td><td><code>wezterm_automata_prompt_je.md</code> contains the verbatim prompt (724 lines)</td></tr>
+<tr><td>2</td><td>Fed that prompt to ChatGPT, Gemini, and at least one other frontier model to get competing implementation plans <span class="prompt-id">(P15)</span></td><td>~Jan 18 2026</td><td><span class="conf-very-high">Very High</span></td><td>3 guide files exist from different models: ChatGPT (666 lines), Gemini (39 lines, truncated), plus PLAN.md (4,855 lines, likely Claude)</td></tr>
+<tr><td>3</td><td>Had a Codex-class model synthesize the competing plans into a single blended plan, referencing all inputs <span class="prompt-id">(P15)</span></td><td>~Jan 18 2026</td><td><span class="conf-high">High</span></td><td>PLAN_CODEX.md header explicitly lists all 4 source files as &quot;Primary spec&quot; and &quot;Background&quot;</td></tr>
+<tr><td>4</td><td>Ran 2-3 praise rounds on the master plan to push it from decent to exhaustive — 24 sections, multiple appendices <span class="prompt-id">(P30-P32)</span></td><td>~Jan 18-25 2026</td><td><span class="conf-medium">Medium</span></td><td>PLAN.md is 4,855 lines, far beyond a single-pass output; depth suggests iterative expansion</td></tr>
+<tr><td>5</td><td>Decomposed the finalized plan into a granular bead system with epics, children, and dependency structure <span class="prompt-id">(P05+P06)</span></td><td>Before Feb 27</td><td><span class="conf-high">High</span></td><td>Every commit in the session references bead tags; ft-3kxe alone has 42+ children</td></tr>
+<tr><td>6</td><td>Commissioned deep integration plans for frankensqlite, franken_redis, and process_triage as sub-projects <span class="prompt-id">(P01+P04)</span></td><td>Before Feb 27</td><td><span class="conf-high">High</span></td><td>3 PLAN_TO_DEEPLY_INTEGRATE_*.md files, each with identical structure (Intent/Objectives/Constraints/Phases)</td></tr>
+<tr><td>7</td><td>Ran comprehensive analysis investigations of sibling projects (frankentui, franken_mermaid, process_triage) to inform integration <span class="prompt-id">(P02+P10)</span></td><td>Before Feb 27</td><td><span class="conf-high">High</span></td><td>3 COMPREHENSIVE_ANALYSIS_OF_*.md files with bead IDs (ft-2vuw7.3.1.x)</td></tr>
+<tr><td>8</td><td>Pushed the entire accumulated codebase (2,150 files, 2.2M lines) as a genesis commit and launched test agents on cap enforcement beads <span class="prompt-id">(P11+P08)</span></td><td>Feb 27, 18:45 EST</td><td><span class="conf-high">High</span></td><td>First commit is a full codebase dump; 7 proptest commits in 20 min all tagged [ft-3kxe.6]</td></tr>
+<tr><td>9</td><td>Manually bumped all git dependencies to latest main HEAD, then had an agent fix the compilation breakage that caused <span class="prompt-id">(P22)</span></td><td>Feb 27, 19:24-20:10</td><td><span class="conf-medium">Medium</span></td><td>&quot;bump ALL git deps to latest main HEAD&quot; commit message reads like a direct instruction; ScoredResult needed two fix attempts</td></tr>
+<tr><td>10</td><td>Launched 3-4 agents simultaneously on different epics: telemetry (ft-3kxe), MCP refactoring (ft-1fv0u), and web refactoring (ft-1zej2) <span class="prompt-id">(P08)</span></td><td>Feb 27, 21:37</td><td><span class="conf-high">High</span></td><td>3 interleaved work streams; merge conflict at 23:05 proves concurrent agents</td></tr>
+<tr><td>11</td><td>Tweeted about agent parallelism and replied to Karpathy while his agent swarm executed beads autonomously</td><td>Feb 27, 23:29-23:58 UTC</td><td><span class="conf-high">High</span></td><td>Tweets timestamped during active commit window: &quot;Are you sure you&#x27;re just not running enough in parallel?&quot;</td></tr>
+<tr><td>12</td><td>Let the telemetry agent(s) marathon through beads .18 to .32, adding counters to 15 modules in sequence at 14 commits/hour peak <span class="prompt-id">(P08 or P25)</span></td><td>Feb 28, 00:00-02:10</td><td><span class="conf-medium">Medium</span></td><td>Perfect sequential bead execution .18-.32; unclear if Jeff issued a new &quot;do all of it&quot; push or agents just kept going</td></tr>
+<tr><td>13</td><td>Closed the ft-3kxe telemetry epic after all 42+ children beads were completed <span class="prompt-id">(P09 or manual)</span></td><td>Feb 28, 03:34</td><td><span class="conf-low">Low</span></td><td>Single chore commit: &quot;close ft-3kxe epic (all children done)&quot; — could be agent or Jeff</td></tr>
+<tr><td>14</td><td>Launched agents on workflow module extraction (ft-c45am): systematically broke a monolithic mod.rs into 10+ submodules, moving ~10,390 lines in 12 commits <span class="prompt-id">(P08)</span></td><td>Feb 28, 04:14-06:20</td><td><span class="conf-high">High</span></td><td>12 sequential commits all tagged [ft-c45am] with balanced insert/delete counts (code movement, not new code)</td></tr>
+<tr><td>15</td><td>Ran a second agent in parallel on remaining telemetry beads (.34-42) while the workflow extraction agent worked <span class="prompt-id">(P08)</span></td><td>Feb 28, 04:21-06:27</td><td><span class="conf-high">High</span></td><td>Telemetry test commits interleaved with workflow commits at overlapping timestamps</td></tr>
+<tr><td>16</td><td>Dealt with the compilation fallout: had agent(s) declare 46 orphaned modules, fix 58 test errors, and clean up visibility/clippy issues <span class="prompt-id">(P22)</span></td><td>Feb 28, 06:44-08:24</td><td><span class="conf-high">High</span></td><td>8 pure fix commits; 46 orphaned modules + 58 test errors = direct consequence of Phase 5 refactoring</td></tr>
+<tr class="sleep"><td>17</td><td>Went to sleep (~4.7 hour gap in commits, minimal tweet activity)</td><td>Feb 28, ~08:30-13:00</td><td><span class="conf-medium">Medium</span></td><td>Longest gap in session; last tweet activity around 03:08 EST</td></tr>
+<tr><td>18</td><td>Woke up, ran cargo test, fixed the one remaining type error (u32::MAX to usize::MAX) <span class="prompt-id">(P22 or manual)</span></td><td>Feb 28, 13:05</td><td><span class="conf-low">Low</span></td><td>Single isolated commit after 4.7-hour gap; specificity suggests manual <code>cargo test</code> discovery</td></tr>
+</tbody>
+</table>
+<div class="footer">
+Reverse-engineered from git forensics, tweet anchors, and methodology analysis.
+&middot; <a href="https://github.com/Dicklesworthstone/frankenterm">Source repo</a>
+&middot; <a href="index.html">Back to index</a>
+</div>
+</div>
+</body>
+</html>

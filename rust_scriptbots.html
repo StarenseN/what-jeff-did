@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What Jeff Did — rust_scriptbots</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:2rem 1.5rem}
+.container{max-width:1200px;margin:0 auto}
+.back{color:#58a6ff;text-decoration:none;font-size:.9rem;display:inline-block;margin-bottom:1.5rem}
+.back:hover{text-decoration:underline}
+h1{font-size:2rem;color:#f0f6fc;margin-bottom:.8rem}
+.summary{color:#8b949e;font-size:1rem;line-height:1.6;margin-bottom:2rem;border-left:3px solid #30363d;padding-left:1rem;max-width:900px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;line-height:1.5}
+thead{position:sticky;top:0}
+th{background:#161b22;color:#f0f6fc;text-align:left;padding:.7rem .8rem;border-bottom:2px solid #30363d;white-space:nowrap}
+td{padding:.6rem .8rem;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+td:first-child{color:#484f58;text-align:center;white-space:nowrap;width:2rem}
+td:nth-child(2){max-width:500px}
+td:nth-child(3){white-space:nowrap;color:#8b949e;width:8rem}
+td:nth-child(4){width:5rem;text-align:center}
+td:nth-child(5){color:#8b949e;font-size:.82rem;max-width:300px}
+.conf-high,.conf-very-high{background:#1a3a1a;color:#3fb950;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-very-high{background:#1a4a1a;color:#56d364}
+.conf-medium{background:#3a3a1a;color:#d29922;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.conf-low{background:#3a1a1a;color:#f85149;padding:.15rem .5rem;border-radius:3px;font-size:.78rem;font-weight:600}
+.prompt-id{color:#bc8cff;font-weight:600}
+.pivot{background:#2d1a1a;font-weight:700;color:#f0f6fc}
+.pivot td{border-top:2px solid #f85149;border-bottom:2px solid #f85149}
+.sleep td{background:#1a1a2d;font-style:italic}
+.footer{margin-top:2.5rem;color:#484f58;font-size:.8rem;text-align:center;padding-top:1.5rem;border-top:1px solid #21262d}
+a{color:#58a6ff;text-decoration:none}
+code{background:#21262d;padding:.15rem .3rem;border-radius:3px;font-size:.82rem;color:#c9d1d9}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="index.html">&larr; All repos</a>
+<h1>What Jeff Did &mdash; rust_scriptbots</h1>
+<div class="summary">Oct 24 2025 – Feb 21 2026 (120 days), 100 commits, 11-crate Rust workspace: ported a C++ artificial-life simulation (ScriptBots) to Rust with GPUI rendering, then pivoted through a rendering crisis to a full Bevy engine integration — all driven by 4 layered plan documents and 9+ named AI agents.</div>
+<table>
+<thead><tr><th>#</th><th>What he did</th><th>When</th><th>Confidence</th><th>How we know</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Wrote a massive first-principles plan for porting ScriptBots to Rust with GPUI — 975 lines covering 11 subsystems <span class="prompt-id">(P01)</span></td><td>Pre-Oct 24</td><td><span class="conf-high">High</span></td><td>Plan in initial commit with <code>[Completed - GPT-5 Codex 2025-10-22]</code> markers proving plan preceded code</td></tr>
+<tr><td>2</td><td>Ran 3 praise rounds to iteratively deepen the plan <span class="prompt-id">(P30, P31, P32)</span></td><td>Pre-Oct 24</td><td><span class="conf-high">High</span></td><td>SIMD roadmap alone is 170+ lines with 3 phases — characteristic iterative deepening from praise rounds</td></tr>
+<tr><td>3</td><td>Wrote a parallel WASM-target plan simultaneously — 282 lines for a sibling browser crate <span class="prompt-id">(P01, P04/P15)</span></td><td>Pre-Oct 24</td><td><span class="conf-medium">Medium</span></td><td>Second plan appears in same initial commit; architectural sophistication suggests GPT Pro cross-review</td></tr>
+<tr><td>4</td><td>Fed both plans to GPT-5 Codex and had it implement the entire codebase in one session <span class="prompt-id">(P05, P08)</span></td><td>Oct 22–23</td><td><span class="conf-high">High</span></td><td><code>codex_log.txt</code> (74,149 lines) in initial commit IS the execution transcript; plan markers cite &quot;GPT-5 Codex 2025-10-22&quot;</td></tr>
+<tr><td>5</td><td>Committed the full Codex output as a single 105K-line initial commit</td><td>Oct 24</td><td><span class="conf-high">High</span></td><td>Commit <code>ec98937</code>: +105,739 lines, zero deletions — complete workspace with 11 crates, plans, and codex log</td></tr>
+<tr><td>6</td><td>Launched an autonomous SIMD + rendering sprint — 19 commits in 10 hours executing the plan&#x27;s Phase 2 roadmap <span class="prompt-id">(P08)</span></td><td>Oct 24–25</td><td><span class="conf-high">High</span></td><td>Plan items flip from <code>[In Progress]</code> to <code>[Completed]</code> inline with commit timestamps; 1.9 commits/hr cadence</td></tr>
+<tr><td>7</td><td>Added a post-processing visual pipeline — tonemapping, bloom, height-fog <span class="prompt-id">(P12/P26)</span></td><td>Oct 25</td><td><span class="conf-medium">Medium</span></td><td>+118 line &quot;comprehensive post-FX roadmap&quot; added to GPUI plan; wgpu upgraded 0.20 to 0.27 in same cluster</td></tr>
+<tr><td>8</td><td>Noticed blank frames from the wgpu renderer and launched a debugging investigation <span class="prompt-id">(P22)</span></td><td>Oct 25–26</td><td><span class="conf-high">High</span></td><td>6 commits: &quot;diagnose renderer path not taken&quot;, &quot;log camera mapping&quot;, &quot;minimal wgpu triangle smoke test&quot;</td></tr>
+<tr><td>9</td><td>Ran a fresh-eyes deep review — found SIGILL crashes, rustfmt violations, clippy issues <span class="prompt-id">(P02)</span></td><td>Oct 29</td><td><span class="conf-very-high">Very High</span></td><td>+2,100/-750 line refactor across 15 files in 70 min; <code>.beads/config.json</code> created — adopted bead workflow</td></tr>
+<tr><td>10</td><td>Assessed weakest parts of the system, then fixed Linux GUI support, type safety, and code quality <span class="prompt-id">(P14)</span></td><td>Oct 29</td><td><span class="conf-medium">Medium</span></td><td>Three sequential commits follow the P14 two-step: identify gap then fix it</td></tr>
+<tr><td>11</td><td>Attempted to fix rendering parity with original C++ geometry <span class="prompt-id">(P22)</span></td><td>Oct 30 morning</td><td><span class="conf-high">High</span></td><td>Commit <code>95bc206</code>: &quot;restore legacy geometry parity with original C++ implementation&quot;</td></tr>
+<tr class="pivot"><td>12</td><td><strong>PIVOT 1:</strong> Stopped patching and wrote a new Rendering Fix Plan — 102 lines with multi-agent coordination broadcast <span class="prompt-id">(P01)</span></td><td>Oct 30 02:36</td><td><span class="conf-very-high">Very High</span></td><td><code>PLAN_TO_FIX_RENDERING_ISSUES.md</code> created with &quot;immediate lead assignments&quot; for PurpleBear, PinkMountain, RedCastle</td></tr>
+<tr><td>13</td><td>Dispatched multiple named agents to execute the rendering fix plan — camera system, visual polish, HUD theming <span class="prompt-id">(P08 x N)</span></td><td>Oct 30 02:38–19:36</td><td><span class="conf-high">High</span></td><td>10 commits over 17 hrs; plan markers: &quot;Completed – PurpleBear&quot;, &quot;Completed – PinkMountain &amp; RedSnow&quot;</td></tr>
+<tr class="pivot"><td>14</td><td><strong>PIVOT 2:</strong> wgpu still producing blank frames — wrote Bevy engine integration plan, 201 lines <span class="prompt-id">(P01)</span></td><td>Oct 30 20:18</td><td><span class="conf-very-high">Very High</span></td><td>Commit <code>dd37514</code> adds blank-frame detection AND <code>PLAN_TO_INTEGRATE_BEVY_ENGINE_TO_SCRIPTBOTS.md</code> simultaneously</td></tr>
+<tr><td>15</td><td>Blitzed Bevy Phase 0 scaffolding — 7 commits in 12 minutes, 35 commits/hr <span class="prompt-id">(P08)</span></td><td>Oct 30 20:18–20:30</td><td><span class="conf-high">High</span></td><td>Fastest burst in repo; each commit maps to a Phase 0 task: workspace → CLI → stubs → wiring</td></tr>
+<tr><td>16</td><td>Launched multi-agent Bevy sprint — 5+ named agents built Phases 1–4 in 5.3 hours, 21 commits <span class="prompt-id">(P08 x N)</span></td><td>Oct 30 23:59 – Oct 31 05:19</td><td><span class="conf-high">High</span></td><td>Agents OrangeLake, BrownLake, BrownCreek, BlueMountain credited; plan grew from 201 to 800+ lines during execution</td></tr>
+<tr><td>17</td><td>Self-review cleanup between Bevy phases — extracted helpers, fixed transform bundles <span class="prompt-id">(P02b)</span></td><td>Oct 31</td><td><span class="conf-medium">Medium</span></td><td>Small refactor commits interleaved with feature commits: &quot;extract agent avatar rendering&quot;, &quot;replace TransformBundle&quot;</td></tr>
+<tr><td>18</td><td>Completed 3D agent avatars, tonemapping, and accessibility palettes in one large session <span class="prompt-id">(P25/P12)</span></td><td>Oct 31 19:43</td><td><span class="conf-medium">Medium</span></td><td>+1,700 line commit followed by immediate 1-minute-later refactor — single agent completing then self-reviewing</td></tr>
+<tr><td>19</td><td>Ensured GPUI-Bevy renderer parity — tonemapping config surface, offscreen rendering, env overrides <span class="prompt-id">(P14)</span></td><td>Nov 7</td><td><span class="conf-medium">Medium</span></td><td>Commit <code>3399176</code>: &quot;GPUI offscreen parity&quot; + render_config_template.toml standardizing both paths</td></tr>
+<tr><td>20</td><td>Set up beads tooling and bv viewer for the project (manual)</td><td>Jan 9–19</td><td><span class="conf-low">Low</span></td><td>Small .gitignore updates, config.json → metadata.json migration; days between commits = sporadic manual work</td></tr>
+<tr><td>21</td><td>Overhauled AGENTS.md with comprehensive multi-agent conventions — 411 lines <span class="prompt-id">(P01 or manual)</span></td><td>Jan 17–18</td><td><span class="conf-medium">Medium</span></td><td>Content matches conventions from other Jeff repos (frankensqlite, etc.) — cross-project standardization</td></tr>
+<tr><td>22</td><td>Fixed CI, WASM compatibility, simplified core library <span class="prompt-id">(P22, manual)</span></td><td>Jan 17–25</td><td><span class="conf-low">Low</span></td><td>Mix of CI workflow fixes, <code>configure_parallelism</code> WASM fix, MIT license addition</td></tr>
+<tr><td>23</td><td>Updated AGENTS.md again with latest multi-agent conventions — +447/-67 lines <span class="prompt-id">(P01 or manual)</span></td><td>Feb 14</td><td><span class="conf-medium">Medium</span></td><td>3-week gap suggests Jeff returned with learnings from other projects</td></tr>
+<tr><td>24</td><td>Finalized license as MIT with OpenAI/Anthropic Rider under his real name (manual)</td><td>Feb 21</td><td><span class="conf-very-high">Very High</span></td><td>Only commit authored as &quot;Jeff Emanuel&quot; instead of &quot;Dicklesworthstone&quot; — inherently a human decision</td></tr>
+</tbody>
+</table>
+<div class="footer">
+Reverse-engineered from git forensics, tweet anchors, and methodology analysis.
+&middot; <a href="https://github.com/Dicklesworthstone/rust_scriptbots">Source repo</a>
+&middot; <a href="index.html">Back to index</a>
+</div>
+</div>
+</body>
+</html>
