@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeff aux Commandes</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:2rem 1.5rem}
+.container{max-width:1200px;margin:0 auto}
+.back{color:#58a6ff;text-decoration:none;font-size:.9rem;display:inline-block;margin-bottom:1.5rem}
+.back:hover{text-decoration:underline}
+h1{font-size:2.2rem;color:#f0f6fc;margin-bottom:.4rem}
+.subtitle{color:#8b949e;font-size:1rem;line-height:1.6;margin-bottom:2.5rem;max-width:900px}
+
+.stage{margin-bottom:2.8rem}
+.stage-header{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.3rem}
+.stage-num{color:#bc8cff;font-size:1.6rem;font-weight:700;font-family:'Courier New',monospace}
+.stage-title{font-size:1.3rem;color:#f0f6fc;font-weight:700}
+.stage-desc{color:#8b949e;font-size:.92rem;margin-bottom:.8rem;padding-left:.2rem}
+
+table{width:100%;border-collapse:collapse;font-size:.86rem;line-height:1.5;margin-bottom:.3rem}
+thead{position:sticky;top:0}
+th{background:#161b22;color:#f0f6fc;text-align:left;padding:.55rem .7rem;border-bottom:2px solid #30363d;white-space:nowrap}
+td{padding:.5rem .7rem;border-bottom:1px solid #21262d;vertical-align:top}
+tr:hover td{background:#161b22}
+td:first-child{max-width:280px}
+td:nth-child(2){white-space:nowrap;width:10rem}
+td:nth-child(3){color:#8b949e;font-size:.82rem;max-width:420px}
+
+.repo-tag{display:inline-block;padding:.1rem .4rem;border-radius:3px;font-size:.75rem;font-weight:600;margin-right:.2rem}
+.repo-fsql{background:#1a2d1a;color:#3fb950}
+.repo-fterm{background:#1a1a3a;color:#79c0ff}
+.repo-rsbot{background:#3a2d1a;color:#d29922}
+.repo-mcpam{background:#2d1a2d;color:#bc8cff}
+.repo-ftui{background:#1a2d2d;color:#56d4dd}
+
+.prompt-id{color:#bc8cff;font-weight:600}
+.footer{margin-top:2.5rem;color:#484f58;font-size:.8rem;text-align:center;padding-top:1.5rem;border-top:1px solid #21262d}
+a{color:#58a6ff;text-decoration:none}
+code{background:#21262d;padding:.15rem .3rem;border-radius:3px;font-size:.82rem;color:#c9d1d9}
+
+.legend{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;padding:.6rem .8rem;background:#161b22;border:1px solid #30363d;border-radius:6px;font-size:.8rem}
+.legend-item{display:flex;align-items:center;gap:.3rem}
+</style>
+</head>
+<body>
+<div class="container">
+<a class="back" href="index.html">&larr; All repos</a>
+<h1>Jeff aux Commandes</h1>
+<p class="subtitle">Ce que Jeff fait vraiment, etape par etape, d'apres 5 repos et 103 decisions reconstruites.</p>
+
+<div class="legend">
+<span style="color:#8b949e;margin-right:.3rem">Repos:</span>
+<span class="legend-item"><span class="repo-tag repo-fsql">fsql</span> frankensqlite</span>
+<span class="legend-item"><span class="repo-tag repo-fterm">fterm</span> frankenterm</span>
+<span class="legend-item"><span class="repo-tag repo-rsbot">rsbot</span> rust_scriptbots</span>
+<span class="legend-item"><span class="repo-tag repo-mcpam">mcpam</span> mcp_agent_mail_rust</span>
+<span class="legend-item"><span class="repo-tag repo-ftui">ftui</span> frankentui</span>
+</div>
+
+<!-- ═══════════════════ STAGE 1 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">1</span>
+<span class="stage-title">&laquo; Il ecrit le plan &raquo;</span>
+</div>
+<p class="stage-desc">First-principles prompt, praise rounds to push models to their limit, then multi-model competition for redundant coverage.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>8,628-line seed spec pasted into a fresh model for full architecture review <span class="prompt-id">(P01/P04)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>First commit is +8,628/-0; message: "Add comprehensive specification documents"</td></tr>
+<tr><td>724-line seed prompt written, fed to ChatGPT + Gemini + Claude for competing plans <span class="prompt-id">(P01/P15)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>3 guide files from different models; <code>wezterm_automata_prompt_je.md</code> = verbatim prompt</td></tr>
+<tr><td>975-line first-principles plan covering 11 subsystems, with WASM sibling plan <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>Plan in initial commit has <code>[Completed - GPT-5 Codex 2025-10-22]</code> markers</td></tr>
+<tr><td>2,683-line behavioral spec extracted from Python codebase so agents never read legacy <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Header says "you should NOT need to consult legacy code"</td></tr>
+<tr><td>Plan iterated V5.0 to V6.4 (Opus) + condensed V6.3 (Codex variant) = 152KB <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td>Version numbering implies 6+ prior drafts; no plan edits after initial commit</td></tr>
+<tr><td>Praise round: "a far cry from OPTIMAL" &rarr; "ABSOLUTE BEST, leave nothing on the table" <span class="prompt-id">(P31/P32)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>+431/-76 then +242/-116; reconciles contradictions instead of adding sections</td></tr>
+<tr><td>PLAN.md grew to 4,855 lines through 2-3 praise rounds = exhaustive 24-section document <span class="prompt-id">(P30-P32)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>Depth far beyond single-pass output; multiple appendices</td></tr>
+<tr><td>3 praise rounds deepened SIMD roadmap alone to 170+ lines with 3 phases <span class="prompt-id">(P30-P32)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>Iterative deepening visible in plan structure</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 2 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">2</span>
+<span class="stage-title">&laquo; Il synthetise &raquo;</span>
+</div>
+<p class="stage-desc">Blend competing model outputs into one master plan. Inject alien-artifact math for sections that need formal rigor.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>Codex synthesis: fed 3+ frontier model outputs into one model to blend "best of all worlds" <span class="prompt-id">(P15)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>Commit explicitly says "Codex synthesis"; tweet confirms "every frontier model weighed in"</td></tr>
+<tr><td>PLAN_CODEX.md created by synthesizing 4 named source files into a single blended plan <span class="prompt-id">(P15)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>Header explicitly lists all 4 source files as "Primary spec" and "Background"</td></tr>
+<tr><td>"Alien artifact" math prompt fired at multiple models; 8 sub-versions (V1.5-V1.6h) in 34 min <span class="prompt-id">(P26)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>Tweet: "Alien Artifacts are here"; V1.6f commit removes "3-way merge artifacts"</td></tr>
+<tr><td>Post-merge reconciliation: scrutinize spec for inconsistencies, align naming, seal traits <span class="prompt-id">(P02b)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>High deletion count (+1,398/-848) = reconciliation pass</td></tr>
+<tr><td>VISION.md synthesized from "10 days of user direction" into new features beyond simple port</td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Header: "synthesized from 10 days of user direction"</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 3 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">3</span>
+<span class="stage-title">&laquo; Il decoupe en beads &raquo;</span>
+</div>
+<p class="stage-desc">Decompose the plan into a dependency-ordered bead graph. QA the graph until it stabilizes, then grow it as work reveals new tasks.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>168 beads created day 1, grew to 2,583 total across the project <span class="prompt-id">(P05/P06)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td><code>issues.jsonl</code> shows 168 on Jan 31; 582 new beads created on Feb 2 alone</td></tr>
+<tr><td>Bead graph grew from 871KB to 2.6MB across 8 snapshots over 5 days <span class="prompt-id">(P05/P06)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td><code>.beads/.br_history/</code> contains 8 snapshots showing growth pattern</td></tr>
+<tr><td>Every commit references bead tags; ft-3kxe epic alone has 42+ children <span class="prompt-id">(P05)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>Commit messages all tagged with bead IDs; hierarchical structure</td></tr>
+<tr><td>Commissioned 3 deep integration plans for sibling projects before bead execution <span class="prompt-id">(P01/P04)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>3 PLAN_TO_DEEPLY_INTEGRATE_*.md files with identical structure</td></tr>
+<tr><td>Plan iterated 4-5 rounds until changes became incremental, then frozen for bead decomposition <span class="prompt-id">(P04)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Beads history starts Feb 8 with 871KB snapshot; plan shows iterative refinement</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 4 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">4</span>
+<span class="stage-title">&laquo; Il lance le swarm &raquo;</span>
+</div>
+<p class="stage-desc">Genesis commit dumps accumulated work (100K-2.2M lines). Dispatch named agents on separate epics simultaneously.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>Genesis commit: 2,150 files, 2.2M lines pushed as first commit <span class="prompt-id">(P11)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>Full codebase dump; test agents launched immediately on cap enforcement beads</td></tr>
+<tr><td>Genesis commit: 530,372 insertions, 1,165 files after 19 days of private planning <span class="prompt-id">(P11)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Commit <code>2e8880c</code>; diff stats prove full project seed</td></tr>
+<tr><td>Genesis commit: 105,739 lines from a single GPT-5 Codex session <span class="prompt-id">(P11)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>Commit <code>ec98937</code>: +105,739/-0; 11 crates + plans + codex log</td></tr>
+<tr><td>3-4 agents launched simultaneously on telemetry, MCP refactoring, and web epics <span class="prompt-id">(P08)</span></td><td><span class="repo-tag repo-fterm">fterm</span></td><td>3 interleaved work streams; merge conflict at 23:05 proves concurrency</td></tr>
+<tr><td>30+ named agents coordinating via Agent Mail + file reservations <span class="prompt-id">(P08)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td>SESSION_TODO full of "reserve files", "resolve reservation conflicts" entries</td></tr>
+<tr><td>14 commits in 5:47 from concurrent agents dumping results <span class="prompt-id">(P08/P11)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Commit says "from concurrent agent"; another says "sync concurrent agent changes"</td></tr>
+<tr><td>5+ named agents (OrangeLake, BrownLake, etc.) built Bevy Phases 1-4 in 5.3 hours <span class="prompt-id">(P08)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>Plan grew from 201 to 800+ lines during agent execution</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 5 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">5</span>
+<span class="stage-title">&laquo; Il surveille et corrige &raquo;</span>
+</div>
+<p class="stage-desc">Deep review passes (numbered, systematic). "What are the weakest parts?" diagnostic. Fresh eyes after sleep.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>41 commits in 78 min of systematic "deep audit" across 6 spec sections <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>Commit messages say "deep audit" repeatedly; V1.7b-V1.7c = correction epicenter</td></tr>
+<tr><td>5 separate "fresh eyes" sessions: agents randomly explore code, fix silly mistakes <span class="prompt-id">(P02/P02b)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>7 commits in 14 min; 4 in 52s; 10 in 4 min; pattern spans all subsystems</td></tr>
+<tr><td>"What are the weakest parts?" then "figure out what to do and make small edits" <span class="prompt-id">(P14)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>Tweet quotes the exact phrasing; witness index sizing + TxnId sentinels fixed</td></tr>
+<tr><td>Sleep break, then morning fix: woke up, ran cargo test, targeted cross-process bug <span class="prompt-id">(P20/P02)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>6h13m gap; first commit is surgical +56/-16 fix</td></tr>
+<tr><td>Deep review sprint: 30+ agents doing "UBS scans", perf profiling, coverage audits <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td>SESSION_TODO: agents RedSpring, LilacDune, BrownMarsh all running same protocol</td></tr>
+<tr><td>Fresh-eyes review: found SIGILL crashes, rustfmt violations, clippy issues across 15 files <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>+2,100/-750 line refactor in 70 min; adopted bead workflow same session</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 6 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">6</span>
+<span class="stage-title">&laquo; Il pivote quand ca bloque &raquo;</span>
+</div>
+<p class="stage-desc">When patching fails, write a new plan instead. Reassign agents to the fresh plan. Don't throw good effort after bad.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td>PIVOT 1: wgpu blank frames &rarr; wrote 102-line Rendering Fix Plan with agent assignments <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td><code>PLAN_TO_FIX_RENDERING_ISSUES.md</code>; lead assignments for PurpleBear, PinkMountain, RedCastle</td></tr>
+<tr><td>PIVOT 2: still blank frames &rarr; wrote 201-line Bevy engine integration plan <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-rsbot">rsbot</span></td><td>Blank-frame detection AND new plan committed simultaneously; 7 commits in 12 min for Phase 0</td></tr>
+<tr><td>Search V3: wrote ADR first, then decomposed monolithic search into two-tier architecture <span class="prompt-id">(P01)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>ADR-003 (220 lines) + 18,342-line implementation commit; ADR-first = P01 pattern</td></tr>
+<tr><td>Transition plan for migrating Python users to Rust replacement <span class="prompt-id">(P01/P04)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Execution TODO has all checklist items checked; Codex executed the plan</td></tr>
+<tr><td>Gemini CLI onboarding failed (SIGHUP); created workaround file instead of blocking <span class="prompt-id">(P18)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td><code>CONTEXT_SETUP_LOG.md</code> dated Feb 16; <code>INTRODUCTION.md</code> created as fallback</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- ═══════════════════ STAGE 7 ═══════════════════ -->
+<div class="stage">
+<div class="stage-header">
+<span class="stage-num">7</span>
+<span class="stage-title">&laquo; Il durcit &raquo;</span>
+</div>
+<p class="stage-desc">Security passes, arithmetic safety audits, performance profiling as scheduled beads. Final hardening before release.</p>
+<table>
+<thead><tr><th>What</th><th>Repo</th><th>Evidence</th></tr></thead>
+<tbody>
+<tr><td><code>saturating_sub</code> audit: replaced potential underflow panics across entire codebase <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>4 of 10 commits in a 4-minute window touch cli, server, tui, share/tools</td></tr>
+<tr><td>Cache invalidation + SQLite locking + path traversal security + TUI hardening <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>Commit <code>1682606</code>: +888/-209 lines; focused security pass</td></tr>
+<tr><td>Extreme optimization loop: hyperfine baselines, perf profiles, isomorphism proofs <span class="prompt-id">(P12)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td>Agents running identical optimization protocol on bd-2me70, bd-2mhdh, bd-3e1t.*</td></tr>
+<tr><td>SHM snapshot seqlock + coordinator IPC + TxnSlot protocol + wire payload schemas <span class="prompt-id">(P25)</span></td><td><span class="repo-tag repo-fsql">fsql</span></td><td>Commits go from +1,337 additions to tiny +50/+56/+82 fixes; session winds down</td></tr>
+<tr><td>Conformal frame guards + degradation cascade + integration tests <span class="prompt-id">(P02)</span></td><td><span class="repo-tag repo-ftui">ftui</span></td><td>Commit <code>12f6a98a</code>: statistical methods for rendering quality assurance</td></tr>
+<tr><td>127 unit tests across 4 modules + workspace-wide clippy cleanup <span class="prompt-id">(P13)</span></td><td><span class="repo-tag repo-mcpam">mcpam</span></td><td>8 commits over 3.5 hours; test counts in messages: 35+12+35+18+27 = 127</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="footer">
+Synthese de 5 repos, 103 decisions reconstruites par forensics git et ancrage tweet.<br>
+Methodologie: reverse engineering de <a href="https://x.com/doodlestein">@doodlestein</a> (Jeffrey Emanuel).
+&middot; <a href="index.html">Retour a l'index</a>
+</div>
+</div>
+</body>
+</html>
